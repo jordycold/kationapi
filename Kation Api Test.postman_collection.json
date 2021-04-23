@@ -1,0 +1,327 @@
+{
+	"info": {
+		"_postman_id": "523251df-f9ea-4197-9b4f-791420b8f8a7",
+		"name": "Kation Api Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "{\"name\":\"Kation\", \"lname\":\"Interactive\",\"email\":\"kation@kation.com\",\"password\":\"kation\"}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"Jordy\", \"lname\":\"Friasí\",\"email\":\"jordhy@frias.com\",\"password\":\"jordy\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Probar registro de usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"email\":\"jordhy@frias.com\",\"password\":\"jordy\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Probar login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoiam9yZGh5QGZyaWFzLmNvbSIsIm5hbWUiOiJKb3JkeSIsImxuYW1lIjoiRnJpYXNcdTAwZWQiLCJpYXQiOjE2MTkxMzUwNjYsImV4cCI6MTYxOTczOTg2Nn0.kmGWfaHMFH7G6YbZi6pWVAlsqL2ErQJh4aehMy6bT0E\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"lname\":\"Frías\",\"email\":\"jordhy@jordy.com\", \"password\":\"jordy\"}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"update"
+					]
+				},
+				"description": "Actualizar usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/getuser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjYsImVtYWlsIjoiam9yZGh5QGZyaWFzLmNvbSIsIm5hbWUiOiJKb3JkeSIsImxuYW1lIjoiRnJpYXNcdTAwZWQiLCJpYXQiOjE2MTkxMzUwNjYsImV4cCI6MTYxOTczOTg2Nn0.kmGWfaHMFH7G6YbZi6pWVAlsqL2ErQJh4aehMy6bT0E\"",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getuser"
+					]
+				},
+				"description": "Listar usuarios"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/deleteuser/4",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "json",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImVtYWlsIjoia2F0aW9uQGthdGlvbi5jb20iLCJuYW1lIjoiS2F0aW9uIiwibG5hbWUiOiJJbnRlcmFjdGl2ZSIsImlhdCI6MTYxODk2MDQzMSwiZXhwIjoxNjE5NTY1MjMxfQ.6JEVPE--MXv3yYEreGjtzJv2q_wQ7HBec77ykFFeH0k\"",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "json",
+							"value": "{\"name\":\"Kation\", \"lname\":\"Interactive\",\"email\":\"kation@kation.com\",\"password\":\"kation\"}",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/deleteuser/4",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"deleteuser",
+						"4"
+					]
+				},
+				"description": "Borrar usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/resetpwd",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "json",
+						"value": "{\"name\":\"Kation\", \"lname\":\"Interactive\",\"email\":\"kation@kation.com\",\"password\":\"kation\"}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "jordhy@jordy.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/resetpwd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"resetpwd"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Restablecer contraseña"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/filter?filter=Jordy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/filter?filter=Jordy",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"filter"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "Jordy"
+						}
+					]
+				},
+				"description": "Filtrar por correo y nombre"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
